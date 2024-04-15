@@ -37,7 +37,7 @@ function M.config()
 
   keymap('n', '<leader>ha', function()
     harpoon:list():add()
-  end, opts '[H]arpoon will [A]dd the current buffer to the quick menu')
+  end, opts '[H]arpoon [A]dd to quick menu')
   keymap('n', '<leader>hq', function()
     toggle_telescope(harpoon:list())
   end, opts 'Toggle [H]arpoon [Q]uick menu')

@@ -13,6 +13,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.api.nvim_create_autocmd('FileType', {
+  desc = 'Sets custom markdown options, when a markdown file is opened',
+  group = vim.api.nvim_create_augroup('custom-markdown-options', {}),
   callback = function(ev)
     -- print('Event fired: s', vim.inspect(ev))
     if ev.match == 'markdown' then
