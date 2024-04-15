@@ -92,6 +92,7 @@ local M = {
       return { noremap = true, silent = true, desc = desc or '' }
     end
     keymap('n', '<leader>e', '<cmd>Neotree toggle<CR>', opts 'Toggle filetree')
+    keymap('n', '<S-m-j>', '<cmd>Neotree reveal<CR>', opts 'Reveal file in explorer')
   end,
 }
 
