@@ -18,6 +18,7 @@ spec 'user.treesitter'
 spec 'user.neo-tree'
 spec 'user.terminal'
 spec 'user.autopairs'
+spec 'user.hop'
 require 'user.lazy'
 require 'current-theme'
 

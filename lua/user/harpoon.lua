@@ -86,7 +86,7 @@ function M.config()
     require('harpoon.list'):clear()
   end, opts '[H]arpoon [C]lear all')
 
-  keymap('n', '<leader>hq', function()
+  keymap('n', '<leader>hl', function()
     -- harpoon.ui:toggle_quick_menu(harpoon:list())
     toggle_telescope(harpoon:list())
   end, opts 'Toggle [H]arpoon [Q]uick menu')
@@ -104,11 +104,11 @@ function M.config()
     harpoon:list():select(4)
   end, opts '[H]arpoon select 4')
 
-  keymap('n', '<C-S-P>', function()
-    harpoon:list():prev()
+  keymap('n', '<S-h>', function()
+    harpoon:list():prev { ui_nav_wrap = true }
   end, opts 'Toggle [P]revious buffer in harpoon list')
-  keymap('n', '<C-S-N>', function()
-    harpoon:list():next()
+  keymap('n', '<S-l>', function()
+    harpoon:list():next { ui_nav_wrap = true }
   end, opts 'Toggle [N]ext buffer in harpoon list')
 end
 
