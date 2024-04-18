@@ -18,6 +18,8 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
+keymap('n', '<leader>so', '<cmd>so %<CR>', opts '[S]ource this file')
+
 -- MARK: Buffers
 
 -- Save buffer
@@ -60,7 +62,7 @@ keymap('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 keymap('n', '<m-l>', '<cmd>vsplit<CR>', opts 'Split window left')
 keymap('n', '<m-j>', '<cmd>split<CR>', opts 'Split window bottom')
--- '<m-h>' == 'alt'
+-- NOTE: '<m-h>' == 'alt'
 
 -- MARK: Center screen
 
@@ -71,6 +73,16 @@ keymap('n', '*', '*zz', opts())
 keymap('n', '#', '#zz', opts())
 
 -- MARK: Visual
+
+local function search()
+  local reg = vim.fn.getreg 'p'
+  vim.notify(reg)
+  -- os.execute('google ' .. reg)
+  -- io.popen('google' .. reg)
+  os.execute 'python -c "print("hello")"'
+end
+
+-- keymap('v', '<C-x>', search, opts 'Search with selection')
 
 -- Stay in indent mode
 keymap('v', '<', '<gv', opts())
