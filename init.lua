@@ -19,6 +19,8 @@ spec 'user.neo-tree'
 spec 'user.terminal'
 spec 'user.autopairs'
 spec 'user.hop'
+spec 'user.breadcrumbs'
+spec 'user.navic'
 require 'user.lazy'
 require 'current-theme'
 

@@ -2,7 +2,7 @@ local M = {
   'ThePrimeagen/harpoon',
   branch = 'harpoon2',
   dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' },
-  event = 'VimEnter',
+  event = 'VeryLazy',
 }
 
 function M.config()
@@ -74,19 +74,21 @@ function M.config()
 
   local keymap = vim.keymap.set
 
-  keymap('n', '<leader>ha', function()
+  keymap('n', '<m-m>', function()
     harpoon:list():add()
-  end, opts '[H]arpoon [A]dd to quick menu')
+    vim.notify 'Harpooned file 𐃆  '
+  end, opts '[M]ark file in harpoon list')
 
   keymap('n', '<leader>hd', function()
     harpoon:list():remove()
   end, opts '[H]arpoon [D]elete current buffer')
 
   keymap('n', '<leader>hc', function()
-    require('harpoon.list'):clear()
+    harpoon:list():clear()
+    vim.notify 'Cleared harpoon list 🧹'
   end, opts '[H]arpoon [C]lear all')
 
-  keymap('n', '<leader>hl', function()
+  keymap('n', '<tab>', function()
     -- harpoon.ui:toggle_quick_menu(harpoon:list())
     toggle_telescope(harpoon:list())
   end, opts 'Toggle [H]arpoon [Q]uick menu')
