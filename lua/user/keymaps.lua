@@ -88,6 +88,11 @@ end
 keymap('v', '<', '<gv', opts())
 keymap('v', '>', '>gv', opts())
 
+-- Replace all in buffer
+keymap('v', '<C-r>', function()
+  return 'y:%s/<C-r><C-w>/'
+end, { expr = true })
+
 -- MARK: Keep yank after pasting
 keymap('x', 'p', [["_dP]])
 
