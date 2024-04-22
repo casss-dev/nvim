@@ -85,9 +85,6 @@ end
 -- keymap('v', '<C-x>', search, opts 'Search with selection')
 
 -- Stay in indent mode
-keymap('v', '<', '<gv', opts())
-keymap('v', '>', '>gv', opts())
-
 -- Replace all in buffer
 keymap('v', '<C-r>', function()
   return 'y:%s/<C-r><C-w>/'
