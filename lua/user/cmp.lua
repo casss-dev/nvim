@@ -42,13 +42,24 @@ local M = {
   config = function()
     -- See `:help cmp`
     local cmp = require 'cmp'
+
+    -- MARK: LuaSnip Config
+
     local luasnip = require 'luasnip'
-    luasnip.config.setup {}
+    luasnip.config.setup {
+      -- history = true, -- will let you go back to a snippet
+      updateevents = 'TextChanged,TextChangedI', -- shows you in real time rep()
+      enable_autosnippets = true,
+    }
+
+    require('luasnip.loaders.from_vscode').lazy_load { paths = { '~/.config/nvim/lua/user/snippets/' } }
 
     local check_backspace = function()
       local col = vim.fn.col '.' - 1
       return col == 0 or vim.fn.getline('.'):sub(col, col):match '%s'
     end
+
+    -- MARK: Rest CMP Config
 
     local icons = require 'user.icons'
 
@@ -164,9 +175,9 @@ local M = {
         format = function(entry, vim_item)
           vim_item.kind = icons.kind[vim_item.kind]
           vim_item.menu = ({
-            nvim_lsp = '',
+            nvim_lsp = icons.ui.Tree,
             nvim_lua = '',
-            luasnip = '',
+            luasnip = icons.ui.Pencil,
             buffer = '',
             path = '',
             emoji = '',

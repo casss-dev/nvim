@@ -32,9 +32,8 @@ local M = {
       return '%2l:%-2v'
     end
 
-    vim.keymap.del('n', '<')
-    vim.keymap.del('n', '>')
-
+    -- vim.keymap.del('n', '<<')
+    -- vim.keymap.del('n', '>>')
     require('mini.move').setup {
       -- Module mappings. Use `''` (empty string) to disable one.
       mappings = {

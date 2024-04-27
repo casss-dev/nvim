@@ -1,0 +1,7 @@
+{
+	"print": {
+		"prefix": "pr",
+		"body": "print(\"$1\")\n$0",
+		"description": "print(\"...\")"
+	}
+}

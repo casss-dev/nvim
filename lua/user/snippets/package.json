@@ -1,0 +1,14 @@
+{
+	"name": "my-snips",
+	"engines": {
+		"vscode": "^1.11.0"
+	},
+	"contributes": {
+		"snippets": [
+			{
+				"language": "swift",
+				"path": "./swift.json"
+			}
+		]
+	}
+}
