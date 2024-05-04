@@ -54,6 +54,10 @@ local M = {
 
     require('luasnip.loaders.from_vscode').lazy_load { paths = { '~/.config/nvim/lua/user/snippets/' } }
 
+    vim.keymap.set('n', '<leader>ls', function()
+      require('luasnip.loaders.from_vscode').load { paths = { '~/.config/nvim/lua/user/snippets/' } }
+    end, { desc = 'source [L]ua [S]nippets' })
+
     local check_backspace = function()
       local col = vim.fn.col '.' - 1
       return col == 0 or vim.fn.getline('.'):sub(col, col):match '%s'
