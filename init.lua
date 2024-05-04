@@ -21,6 +21,7 @@ spec 'user.autopairs'
 spec 'user.hop'
 spec 'user.breadcrumbs'
 spec 'user.navic'
+spec 'user.tmux'
 require 'user.lazy'
 require 'current-theme'
 
