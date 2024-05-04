@@ -4,9 +4,9 @@ local M = {
 }
 function M.config()
   local execs = {
-    { nil, '<m-h>', 'Horizontal Terminal', 'horizontal', 0.7 },
+    { nil, '<m-1>', 'Horizontal Terminal', 'horizontal', 0.7 },
     { nil, '<m-2>', 'Vertical Terminal', 'vertical', 0.4 },
-    { nil, '<m-3>', 'Float Terminal', 'float', nil },
+    { nil, [[<c-\>]], 'Float Terminal', 'float', nil },
   }
 
   local function get_buf_size()
@@ -69,7 +69,7 @@ function M.config()
 
   require('toggleterm').setup {
     size = 20,
-    open_mapping = [[<c-\>]],
+    open_mapping = [[<m-h>]],
     hide_numbers = true, -- hide the number column in toggleterm buffers
     shade_filetypes = {},
     shade_terminals = true,
