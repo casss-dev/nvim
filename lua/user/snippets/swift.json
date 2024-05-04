@@ -3,5 +3,53 @@
 		"prefix": "pr",
 		"body": "print(\"$1\")\n$0",
 		"description": "print(\"...\")"
+	},
+	"TCA Feature": {
+		"prefix": "tcafeat",
+		"description": "Creates a Composable Archictecture feature.",
+		"body": [
+			"@Reducer",
+			"struct $1Feature {",
+			"",
+			"    @ObservableState",
+			"    struct State: Equatable {",
+			"        $2",
+			"    }",
+			"",
+			"    enum Action {",
+			"        case $3",
+			"    }",
+			"",
+			"    var body: some Reducer<State, Action> {",
+			"        Reduce<State, Action> { state, action in",
+			"        switch action {",
+			"        case .$3",
+			"            $0",
+			"            break",
+			"        default:",
+			"            break",
+			"        }",
+			"        return .none",
+			"        }",
+			"   }",
+			"}"
+		]
+	},
+	"Environment Key": {
+		"prefix": "envk",
+		"description": "Creates a new environment key with default value.",
+		"body": [
+			"private enum $1Key: EnvironmentKey {",
+			"    static var defaultValue: $2 = $3",
+			"}",
+			"",
+			"extension EnvironmentValues {",
+			"    var $4: $2 {",
+			"        get { self[$1Key.self] }",
+			"        set { self[$1Key.self] = newValue }",
+			"    }",
+			"}",
+			"$0"
+		]
 	}
 }
