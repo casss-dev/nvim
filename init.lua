@@ -22,6 +22,7 @@ spec 'user.hop'
 spec 'user.breadcrumbs'
 spec 'user.navic'
 spec 'user.tmux'
+spec 'user.zen-mode'
 require 'user.lazy'
 require 'current-theme'
 
