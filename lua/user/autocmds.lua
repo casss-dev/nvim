@@ -23,3 +23,13 @@ vim.api.nvim_create_autocmd('FileType', {
     end
   end,
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+  desc = 'Sets custom markdown options, when a swift file is opened',
+  group = vim.api.nvim_create_augroup('custom-swift', {}),
+  callback = function(ev)
+    if ev.match == 'swift' then
+      vim.keymap.set('i', [[<c-\>]], '\\()', { desc = 'Interpolate string' })
+    end
+  end,
+})
