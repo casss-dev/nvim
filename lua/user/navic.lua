@@ -1,3 +1,4 @@
+-- Shows code hierarchy at top
 local M = {
   'SmiteshP/nvim-navic',
 }

@@ -28,6 +28,8 @@ keymap('n', '<leader>z', '<cmd>w<CR>', opts 'Save current buffer')
 -- Delete buffer
 keymap('n', '<m-d>', '<cmd>:bd<CR>', opts 'Deletes the current buffer')
 
+keymap('n', '<m-D>', '<cmd> :%bd|e# <CR>', opts 'Delete all buffers, then open last buffer')
+
 -- Exit highlight
 keymap('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
