@@ -275,9 +275,10 @@ function M.config()
     },
   }
 
-  -- For LSPs not included in mason...
+  -- For LSPs not included in mason or ensured to be installed...
   local custom_servers = {
     'sourcekit',
+    -- 'cssls', -- NOTE: I guess you don't need to manually do this, you can just use Mason
   }
   for _, server in ipairs(custom_servers) do
     local opts = make_opts(server)
