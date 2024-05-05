@@ -8,6 +8,10 @@
 			{
 				"language": "swift",
 				"path": "./swift.json"
+			},
+			{
+				"language": "python",
+				"path": "./python.json"
 			}
 		]
 	}

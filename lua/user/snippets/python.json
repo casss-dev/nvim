@@ -1,0 +1,15 @@
+{
+	"print line separated": {
+		"prefix": "prln",
+		"body": [
+			"print(",
+			"\t\"==============================\",",
+			"\t\"$1:\",",
+			"\t$0",
+			"\t\"==============================\",",
+			"\tsep=\"\\n\"",
+			")"
+		],
+		"description": "print with separation lines (caveman debug)"
+	}
+}
