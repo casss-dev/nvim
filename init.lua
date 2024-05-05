@@ -23,6 +23,7 @@ spec 'user.breadcrumbs'
 spec 'user.navic'
 spec 'user.tmux'
 spec 'user.zen-mode'
+spec 'user.maximize'
 require 'user.lazy'
 require 'current-theme'
 

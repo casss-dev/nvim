@@ -55,7 +55,7 @@ keymap('n', '<right>', '5<C-w><')
 keymap('n', '<up>', '5<C-w>+')
 keymap('n', '<down>', '5<C-w>-')
 
-keymap('n', '<leader>mw', '<C-w>T', opts '[M]aximize [W]indow')
+-- keymap('n', '<leader>mw', '<C-w>T', opts '[M]aximize [W]indow')
 
 -- See `:help wincmd` for a list of all window commands
 keymap('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
