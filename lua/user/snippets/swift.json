@@ -8,6 +8,8 @@
 		"prefix": "tcafeat",
 		"description": "Creates a Composable Archictecture feature.",
 		"body": [
+			"typealias $1Store = StoreOf<$1Feature>",
+			"",
 			"@Reducer",
 			"struct $1Feature {",
 			"",
@@ -23,9 +25,6 @@
 			"    var body: some Reducer<State, Action> {",
 			"        Reduce<State, Action> { state, action in",
 			"        switch action {",
-			"        case .$3",
-			"            $0",
-			"            break",
 			"        default:",
 			"            break",
 			"        }",
