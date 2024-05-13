@@ -30,6 +30,10 @@ local function on_attach(event)
   --  To jump back, press <C-t>.
   map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
 
+  map('g<C-d>', function()
+    require('telescope.builtin').lsp_definitions { jump_type = 'tab' }
+  end, '[G]oto [D]efinition in new tab')
+
   -- Find references for the word under your cursor.
   map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
 
