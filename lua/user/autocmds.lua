@@ -17,9 +17,12 @@ vim.api.nvim_create_autocmd('FileType', {
   group = vim.api.nvim_create_augroup('custom-markdown-options', {}),
   callback = function(ev)
     -- print('Event fired: s', vim.inspect(ev))
-    if ev.match == 'markdown' then
+    local isMD = ev.match == 'markdown'
+    local isGitCommit = ev.match == 'gitcommit'
+    if isMD or isGitCommit then
       vim.cmd 'set wrap'
       vim.cmd 'set linebreak'
+      vim.cmd 'setlocal spell spelllang=en_us'
     end
   end,
 })
