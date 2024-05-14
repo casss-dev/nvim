@@ -11,5 +11,15 @@
 			")"
 		],
 		"description": "print with separation lines (caveman debug)"
+	},
+	"Create main": {
+		"prefix": "main",
+		"body": [
+			"def main():",
+			"\t$0",
+			"",
+			"if __name__ == '__main__':",
+			"\tmain()"
+		]
 	}
 }
