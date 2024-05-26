@@ -32,7 +32,7 @@ vim.api.nvim_create_autocmd('FileType', {
   group = vim.api.nvim_create_augroup('custom-swift', {}),
   callback = function(ev)
     if ev.match == 'swift' then
-      vim.keymap.set('i', [[<c-\>]], '\\()', { desc = 'Interpolate string' })
+      vim.keymap.set('i', [[<c-\>]], '\\()<Left>', { desc = 'Interpolate string' })
     end
   end,
 })
