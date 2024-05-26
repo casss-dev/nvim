@@ -4,6 +4,11 @@
 		"body": "print(\"$1\")\n$0",
 		"description": "print(\"...\")"
 	},
+	"unavailable": {
+		"prefix": "unavail",
+		"body": "@available(*, unavailable, message: \"This property is read-only\")",
+		"description": "Adds an unavailable annotation"
+	},
 	"TCA Feature": {
 		"prefix": "tcafeat",
 		"description": "Creates a Composable Archictecture feature.",
