@@ -32,6 +32,7 @@ function M.config()
       lua = { 'stylua' },
       htmldjango = { 'djlint' },
       swift = { 'swift_format' },
+      python = { 'black' },
 
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
