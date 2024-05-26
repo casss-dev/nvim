@@ -15,7 +15,7 @@ function M.config()
   xcode.setup {
     -- restore_on_start = true, -- logs, diagnostics, and marks will be loaded on VimEnter (may affect performance)
     -- auto_save = true, -- save all buffers before running build or tests (command: silent wa!)
-    -- show_build_progress_bar = true, -- shows [ ...    ] progress bar during build, based on the last duration
+    show_build_progress_bar = true, -- shows [ ...    ] progress bar during build, based on the last duration
     -- prepare_snapshot_test_previews = true, -- prepares a list with failing snapshot tests
     -- test_search = {
     --   file_matching = 'filename_lsp', -- one of: filename, lsp, lsp_filename, filename_lsp. Check out README for details
@@ -107,7 +107,7 @@ function M.config()
         enabled = true, -- run "xcode-build-server config" when scheme changes
       },
       nvim_tree = {
-        enabled = true, -- enable updating Xcode project files when using nvim-tree
+        enabled = false, -- enable updating Xcode project files when using nvim-tree
         guess_target = true, -- guess target for the new file based on the file path
         should_update_project = function(path) -- path can lead to directory or file
           -- it could be useful if you mix Xcode project with SPM for example
@@ -115,7 +115,7 @@ function M.config()
         end,
       },
       neo_tree = {
-        enabled = false, -- enable updating Xcode project files when using neo-tree.nvim
+        enabled = true, -- enable updating Xcode project files when using neo-tree.nvim
         guess_target = true, -- guess target for the new file based on the file path
         should_update_project = function(path) -- path can lead to directory or file
           -- it could be useful if you mix Xcode project with SPM for example
@@ -131,7 +131,7 @@ function M.config()
         end,
       },
       quick = { -- integration with Swift test framework: github.com/Quick/Quick
-        enabled = true, -- enable Quick tests support (requires Swift parser for nvim-treesitter)
+        enabled = false, -- enable Quick tests support (requires Swift parser for nvim-treesitter)
       },
     },
     highlights = {
