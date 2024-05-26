@@ -26,15 +26,15 @@ function M.config()
   vim.keymap.set('n', 'L', arrowP.next)
   vim.keymap.set('n', '<C-p>', arrowP.toggle)
 
-  vim.api.nvim_create_autocmd('BufWritePost', {
-    desc = 'Add file to arrow',
-    group = vim.api.nvim_create_augroup('add file to arrow on write', {}),
-    callback = function(ev)
-      local file = ev.file
-      arrowP.save(file)
-      -- print('Event fired: ', vim.inspect(ev))
-    end,
-  })
+  -- vim.api.nvim_create_autocmd('BufWritePost', {
+  --   desc = 'Add file to arrow',
+  --   group = vim.api.nvim_create_augroup('add file to arrow on write', {}),
+  --   callback = function(ev)
+  --     local file = ev.file
+  --     arrowP.save(file)
+  --     -- print('Event fired: ', vim.inspect(ev))
+  --   end,
+  -- })
 end
 
 return M
