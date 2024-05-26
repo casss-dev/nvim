@@ -24,10 +24,11 @@ spec 'user.breadcrumbs'
 spec 'user.navic'
 spec 'user.tmux'
 spec 'user.maximize'
+spec 'user.symbol-outline'
 -- Extra
 spec 'user.extras.zen-mode'
 spec 'user.extras.ufo'
--- spec 'user.extras.xcodebuild'
+spec 'user.extras.xcodebuild'
 require 'user.lazy'
 require 'current-theme'
 
