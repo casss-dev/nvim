@@ -57,6 +57,13 @@ local M = {
       --   },
       -- },
       -- pickers = {}
+      defaults = {
+        mappings = {
+          i = {
+            ['<m-m>'] = 'send_selected_to_qflist',
+          },
+        },
+      },
       extensions = {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
