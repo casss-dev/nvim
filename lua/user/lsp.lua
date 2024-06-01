@@ -53,6 +53,15 @@ local function on_attach(event)
   --  Symbols are things like variables, functions, types, etc.
   map('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
 
+  -- workspace management. Necessary for multi-module projects
+  map('<space>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd')
+
+  map('<space>wr', vim.lsp.buf.remove_workspace_folder, '[W]orkspace [R]emove')
+
+  map('<space>wl', function()
+    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+  end, '[W]orkspace [L]ist')
+
   -- Fuzzy find all the symbols in your current workspace.
   --  Similar to document symbols, except searches over your entire project.
   map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
@@ -72,6 +81,11 @@ local function on_attach(event)
   -- NOTE: This is not Goto Definition, this is Goto Declaration.
   --  For example, in C this would take you to the header.
   map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+
+  map('<leader>lr', function()
+    vim.cmd 'LspStop'
+    vim.cmd 'LspStart'
+  end, '[L]SP [R]estart')
 
   -- The following two autocommands are used to highlight references of the
   -- word under your cursor when your cursor rests there for a little while.
