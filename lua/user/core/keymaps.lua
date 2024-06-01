@@ -41,6 +41,8 @@ keymap('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic me
 keymap('n', '<leader>de', vim.diagnostic.open_float, { desc = 'Show [D]iagnostic [E]rror messages' })
 -- keymap('n', '<leader>dq', vim.diagnostic.setloclist, { desc = 'Open [D]iagnostic [Q]uickfix list' })
 keymap('n', '<leader>dq', vim.diagnostic.setqflist, { desc = 'Open [D]iagnostic [Q]uickfix list' })
+keymap('n', '<leader>cp', '<cmd>cp<CR>', opts 'Previous quick fix item')
+keymap('n', '<leader>cn', '<cmd>cn<CR>', opts 'Next quick fix item')
 keymap('n', '<leader>li', '<cmd>LspInfo<CR>', opts 'Show [L]sp [I]nfo')
 keymap('n', '<leader>ll', '<cmd>LspLog<CR>', opts 'Show [L]sp [L]ogs')
 keymap('n', '<leader>lcl', vim.lsp.codelens.run, opts 'Run [L]sp [C]ode [L]ens')
