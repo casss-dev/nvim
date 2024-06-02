@@ -29,6 +29,7 @@ spec 'user.symbol-outline'
 spec 'user.extras.zen-mode'
 spec 'user.extras.ufo'
 spec 'user.extras.xcodebuild'
+spec 'user.extras.donut'
 require 'user.lazy'
 require 'current-theme'
 
