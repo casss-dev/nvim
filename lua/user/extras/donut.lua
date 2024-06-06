@@ -3,7 +3,7 @@ local M = {
   version = '*',
   lazy = false,
   opts = {
-    timeout = 30,
+    -- timeout = 30,
   },
 }
 return M
