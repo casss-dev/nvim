@@ -52,8 +52,8 @@ keymap('n', '<leader>lcl', vim.lsp.codelens.run, opts 'Run [L]sp [C]ode [L]ens')
 keymap('n', '<m-c>', '<C-w>c', opts '[C]lose window')
 
 -- Arrow keys resize windows
-keymap('n', '<left>', '5<C-w>>')
-keymap('n', '<right>', '5<C-w><')
+keymap('n', '<left>', '5<C-w><')
+keymap('n', '<right>', '5<C-w>>')
 keymap('n', '<up>', '5<C-w>+')
 keymap('n', '<down>', '5<C-w>-')
 
