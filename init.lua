@@ -12,6 +12,7 @@ spec 'user.arrow'
 -- spec 'user.harpoon'
 spec 'user.cmp'
 spec 'user.lsp'
+spec 'user.jdtls' -- java support
 spec 'user.format'
 spec 'user.todo'
 spec 'user.mini'
