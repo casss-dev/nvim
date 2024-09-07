@@ -15,9 +15,9 @@ function M.config()
     window = { -- controls the appearance and position of an arrow window (see nvim_open_win() for all options)
       width = 'auto',
       height = 'auto',
-      relative = 'cursor',
-      row = 0,
-      col = 0,
+      -- relative = 'cursor',
+      -- row = 0,
+      -- col = 0,
       border = 'rounded',
     },
   }

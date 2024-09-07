@@ -1,10 +1,3 @@
--- local conf = {
---   cmd = { vim.fn.expand '~/.local/share/nvim/mason/bin/jdtls' },
---   root_dir = vim.fs.dirname(vim.fs.find({ 'gradlew', '.git', 'mvnw' }, { upward = true })[1]),
---   -- capabilities = cps(),
--- }
--- require('jdtls').start_or_attach(conf)
-
 local home = os.getenv 'HOME'
 local workspace_path = home .. '/.local/share/nvim/jdtls-workspace/'
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
@@ -30,7 +23,8 @@ local config = {
     'java.base/java.util=ALL-UNNAMED',
     '--add-opens',
     'java.base/java.lang=ALL-UNNAMED',
-    '-javaagent:' .. home .. '/.local/share/nvim/mason/packages/jdtls/lombok.jar',
+    string.format('-javaagent:%s', vim.fn.expand '$MASON/packages/jdtls/lombok.jar'),
+    -- '-javaagent:' .. home .. '/.local/share/nvim/mason/packages/jdtls/lombok.jar',
     '-jar',
     vim.fn.glob(home .. '/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_*.jar'),
     '-configuration',
