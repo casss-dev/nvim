@@ -1,0 +1,96 @@
+{
+	"Function": {
+		"scope": "gdscript",
+		"prefix": "fu",
+		"body": [
+			"func $1($2) -> ${3:void}:",
+			"\t${4:pass}"
+		],
+		"description": "Adds dependencies export category"
+	},
+	"Lambda": {
+		"scope": "gdscript",
+		"prefix": "lm",
+		"body": [
+			"var ${1:lambda} = func (${2:params}): ${3:return}$0"
+		],
+		"description": "Adds dependencies export category"
+	},
+	"Dependencies": {
+		"scope": "gdscript",
+		"prefix": "edeps",
+		"body": [
+			"@export_category(\"Dependencies\")"
+		],
+		"description": "Adds dependencies export category"
+	},
+	"Parameters": {
+		"scope": "gdscript",
+		"prefix": "eparms",
+		"body": [
+			"@export_category(\"Parameters\")"
+		],
+		"description": "Adds dependencies export category"
+	},
+	"Log level": {
+		"scope": "gdscript",
+		"prefix": "elog",
+		"body": [
+			"@export_category(\"Debug\")",
+			"@export",
+			"var log_level := Logger.LevelGroup.VERBOSE",
+			"",
+			"@onready",
+			"var logger := Logger.new(self)"
+		],
+		"description": "Adds debug logger"
+	},
+	"Chance": {
+		"scope": "gdscript",
+		"prefix": "echance",
+		"body": [
+			"@export_range(0, 1)",
+			"var $1_chance: float = 0"
+		],
+		"description": "Adds debug logger"
+	},
+	"Setter": {
+		"scope": "gdscript",
+		"prefix": "vset",
+		"body": [
+			"var $1 := $2:",
+			"\tset(value):",
+			"\t\t$1 = value",
+			"\t\t$0"
+		],
+		"description": "Adds debug logger"
+	},
+	"Codeblock comment": {
+		"scope": "gdscript",
+		"prefix": "codebl",
+		"body": [
+			"## [br]",
+			"## [codeblock]",
+			"## $0",
+			"## [/codeblock]"
+		],
+		"description": "Adds a codeblock comment"
+	},
+	"String interpolation": {
+		"scope": "gdscript",
+		"prefix": "\"\"",
+		"body": [
+			"\"$0\" % [$1, $2]"
+		],
+		"description": "Adds a codeblock comment"
+	},
+	"Ready func": {
+		"scope": "gdscript",
+		"prefix": "rd",
+		"body": [
+			"func _ready() -> void:",
+			"\t${1:pass}"
+		],
+		"description": "Adds a codeblock comment"
+	}
+}

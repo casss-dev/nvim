@@ -54,6 +54,7 @@ local M = {
 
     require('luasnip.loaders.from_vscode').lazy_load { paths = { '~/.config/nvim/lua/user/snippets/' } }
 
+    -- Refresh snippets
     vim.keymap.set('n', '<leader>ls', function()
       require('luasnip.loaders.from_vscode').load { paths = { '~/.config/nvim/lua/user/snippets/' } }
     end, { desc = 'source [L]ua [S]nippets' })
@@ -73,7 +74,6 @@ local M = {
           luasnip.lsp_expand(args.body)
         end,
       },
-      completion = { completeopt = 'menu,menuone,noinsert' },
 
       -- For an understanding of why these mappings were
       -- chosen, you will need to read `:help ins-completion`
