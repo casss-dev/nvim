@@ -26,7 +26,7 @@ spec 'user.navic'
 spec 'user.tmux'
 spec 'user.maximize'
 spec 'user.symbol-outline'
-spec 'user.godot'
+require 'user.godot'
 -- Extra
 spec 'user.extras.zen-mode'
 spec 'user.extras.ufo'
