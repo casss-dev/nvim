@@ -80,7 +80,7 @@
 		"scope": "gdscript",
 		"prefix": "\"\"",
 		"body": [
-			"\"$0\" % [$1, $2]"
+			"\"$1\" % [$2]$0"
 		],
 		"description": "Adds a codeblock comment"
 	},

@@ -98,6 +98,13 @@ end, { expr = true })
 -- MARK: Keep yank after pasting
 keymap('x', 'p', [["_dP]])
 
+-- MARK: Auto newline commas
+
+-- hi
+-- keymap('n', '<C-m>', '')
+
+vim.fn.setreg('m', 'F(a\r<C-c>')
+
 -- MARK: Terminal
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
@@ -106,5 +113,7 @@ keymap('x', 'p', [["_dP]])
 
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
-keymap('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
--- keymap('t', '<C-;>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+-- keymap('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
+keymap('n', '<m-h>', ':terminal<CR>', { desc = 'Open new terminal' })
+keymap('t', '<C-\\><C-\\>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
