@@ -84,6 +84,14 @@
 		],
 		"description": "Adds a codeblock comment"
 	},
+	"Deprecate": {
+		"scope": "gdscript",
+		"prefix": "depr",
+		"body": [
+			"## @deprecated(\"Use ${1:new_func} instead\")"
+		],
+		"description": "Adds a deprecation comment"
+	},
 	"Ready func": {
 		"scope": "gdscript",
 		"prefix": "rd",

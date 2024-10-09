@@ -4,9 +4,6 @@ end
 
 local keymap = vim.keymap.set
 
--- MARK: Motions
-keymap('i', 'kj', '<ESC>', opts 'Exits insert mode')
-
 -- Make wrapped lines easier to navigate
 vim.api.nvim_create_autocmd('FileType', {
   callback = function(ev)
@@ -76,6 +73,11 @@ keymap('n', 'n', 'nzz', opts())
 keymap('n', 'N', 'Nzz', opts())
 keymap('n', '*', '*zz', opts())
 keymap('n', '#', '#zz', opts())
+
+-- MARK: Insert
+
+keymap('i', 'kj', '<ESC>', opts 'Exits insert mode')
+keymap('i', '<C-k>', '_', opts 'inserts an underscore')
 
 -- MARK: Visual
 
