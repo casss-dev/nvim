@@ -27,6 +27,7 @@ spec 'user.tmux'
 spec 'user.maximize'
 spec 'user.symbol-outline'
 spec 'user.multi-cursors'
+spec 'user.macro-recorder'
 require 'user.godot'
 -- Extra
 spec 'user.extras.zen-mode'
