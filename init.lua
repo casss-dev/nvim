@@ -26,6 +26,7 @@ spec 'user.navic'
 spec 'user.tmux'
 spec 'user.maximize'
 spec 'user.symbol-outline'
+spec 'user.multi-cursors'
 require 'user.godot'
 -- Extra
 spec 'user.extras.zen-mode'
