@@ -102,8 +102,7 @@ keymap('x', 'p', [["_dP]])
 
 -- MARK: Auto newline commas
 
--- hi
--- keymap('n', '<C-m>', '')
+keymap('n', '<C-m>', 'va(:s/(/(\\r<CR>vf):s/)/\\r)<CR>kv$:s/,<Space>/,\\r/g<CR>j', opts 'Add new line after trailing commas')
 
 vim.fn.setreg('m', 'F(a\r<C-c>')
 
