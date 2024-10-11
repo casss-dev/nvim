@@ -78,6 +78,7 @@ keymap('n', '#', '#zz', opts())
 
 keymap('i', 'kj', '<ESC>', opts 'Exits insert mode')
 keymap('i', '<C-k>', '_', opts 'inserts an underscore')
+keymap('i', '<m-j>', '<ESC>yypf<Space><Ignore>C<Space><C-O>', opts 'Adds a new comment line')
 
 -- MARK: Visual
 
