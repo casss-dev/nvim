@@ -3,13 +3,16 @@ require 'user.core.options'
 require 'user.core.keymaps'
 require 'user.core.autocmds'
 require 'user.themes'
+
 spec 'user.autotab'
 spec 'user.comment'
 spec 'user.gitsigns'
 spec 'user.whichkey'
 spec 'user.telescope'
+
 spec 'user.arrow'
 -- spec 'user.harpoon' -- using arrow instead
+
 spec 'user.cmp'
 spec 'user.lsp'
 spec 'user.java-lsp'
@@ -18,7 +21,9 @@ spec 'user.todo'
 spec 'user.mini'
 spec 'user.treesitter'
 spec 'user.neo-tree'
+
 -- spec 'user.terminal' -- messes up godot server go to file
+
 spec 'user.autopairs'
 spec 'user.hop'
 spec 'user.breadcrumbs'
@@ -28,12 +33,17 @@ spec 'user.maximize'
 spec 'user.symbol-outline'
 spec 'user.multi-cursors'
 spec 'user.macro-recorder'
+
 require 'user.godot'
--- Extra
+
+-- MARK: Extras
 spec 'user.extras.zen-mode'
 spec 'user.extras.ufo'
 spec 'user.extras.xcodebuild'
+
+-- MARK: Screen savers
 spec 'user.extras.donut'
+
 require 'user.lazy'
 require 'current-theme'
 
