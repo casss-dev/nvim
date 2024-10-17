@@ -100,5 +100,14 @@
 			"\t${1:pass}"
 		],
 		"description": "Adds a codeblock comment"
+	},
+	"Null check": {
+		"scope": "gdscript",
+		"prefix": "ifn",
+		"body": [
+			"if $1 == null",
+			"\t${2:return}"
+		],
+		"description": "Adds a null check"
 	}
 }
