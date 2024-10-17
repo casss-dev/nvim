@@ -15,9 +15,9 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
-keymap('n', '<leader>so', '<cmd>so %<CR>', opts '[S]ource this file')
+keymap('n', '<leader>so', '<cmd>so %<CR><cmd>lua print "Sourced file!"<CR>', opts '[S]ource this file')
 
--- MARK: Buffers
+-- MARK: Buffer
 
 -- Save buffer
 keymap('n', '<leader>z', '<cmd>w<CR>', opts 'Save current buffer')
@@ -84,20 +84,23 @@ keymap('i', '<C-h>', '<ESC>', opts 'Delete previous character')
 -- MARK: Visual
 
 local function search()
-  local reg = vim.fn.getreg 'p'
-  vim.notify(reg)
+  -- local reg = vim.fn.getreg 'p'
+  -- vim.notify(reg)
   -- os.execute('google ' .. reg)
   -- io.popen('google' .. reg)
-  os.execute 'python -c "print("hello")"'
+  -- os.execute 'python -c "print("hello")"'
 end
 
 -- keymap('v', '<C-x>', search, opts 'Search with selection')
 
 -- Stay in indent mode
+
 -- Replace all in buffer
-keymap('v', '<C-r>', function()
-  return 'y:%s/<C-r><C-w>/'
-end, { expr = true })
+keymap('n', '<m-r>', ':%s/<C-r>"/', { expr = false, desc = 'Replace all in buffer' })
+
+-- Replace all in visual selection
+-- keymap('v', '<C-r>', ":'<,'>s/<C-r><C-w>/", { expr = false })
+keymap('v', '<C-r>', ':s/<C-r>"/', { expr = false, desc = 'Replace all in visual selection' })
 
 -- MARK: Keep yank after pasting
 keymap('x', 'p', [["_dP]])
