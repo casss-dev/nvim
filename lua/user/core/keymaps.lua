@@ -64,6 +64,11 @@ keymap('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 keymap('n', '<m-l>', '<cmd>vsplit<CR>', opts 'Split window left')
 keymap('n', '<m-j>', '<cmd>split<CR>', opts 'Split window bottom')
+
+-- Tabs
+keymap('n', '<m-,>', 'gT', { desc = 'Focus tab left' })
+keymap('n', '<m-.>', 'gt', { desc = 'Focus tab right' })
+
 -- NOTE: '<m-h>' == 'alt'
 
 -- MARK: Center screen
