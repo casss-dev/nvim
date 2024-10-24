@@ -1,4 +1,12 @@
 {
+	"Variable": {
+		"scope": "gdscript",
+		"prefix": "va",
+		"body": [
+			"var $1 :$2= $3"
+		],
+		"description": "Creates a variable"
+	},
 	"Function": {
 		"scope": "gdscript",
 		"prefix": "fu",
@@ -109,5 +117,27 @@
 			"\t${2:return}"
 		],
 		"description": "Adds a null check"
+	},
+	"Connect signal": {
+		"scope": "gdscript",
+		"prefix": "connect",
+		"body": [
+			"${1:signal_emitter}.${2:signal_callback}.connect(_on_${2:signal_callback})",
+			"func _on_${2:signal_callback}(${3:params}) -> void:",
+			"\tpass$0"
+		],
+		"description": "Adds a null check"
+	},
+	"State chart expression": {
+		"scope": "gdscript",
+		"prefix": "expp",
+		"body": [
+			"var ${1:property}: ${2:type}:",
+			"\tget:",
+			"\t\treturn get_expression_property(\"${1:property}\", ${3:default})",
+			"\tset(value):",
+			"\t\tset_expression_property(\"${1:property}\", value)"
+		],
+		"description": "Adds a typed expression property"
 	}
 }
