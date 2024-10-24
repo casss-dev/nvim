@@ -57,6 +57,7 @@ local M = {
     -- Refresh snippets
     vim.keymap.set('n', '<leader>ls', function()
       require('luasnip.loaders.from_vscode').load { paths = { '~/.config/nvim/lua/user/snippets/' } }
+      print 'Sourced snippets! ✂️'
     end, { desc = 'source [L]ua [S]nippets' })
 
     local check_backspace = function()
