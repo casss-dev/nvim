@@ -82,11 +82,12 @@ keymap('n', '#', '#zz', opts())
 -- MARK: Insert
 
 keymap('i', 'kj', '<ESC>', opts 'Exits insert mode')
-keymap('i', '<C-k>', '_', opts 'inserts an underscore')
+keymap('i', '<C-k>', '_', opts 'inserts an underscore sign')
+keymap('i', '<m-i>', '=', opts 'inserts an equals sign')
 keymap('i', '<m-j>', '<ESC>yypf<Space><Ignore>C<Space><C-O>', opts 'Adds a new comment line')
 keymap('i', '<m-h>', '<BS>', opts 'Delete previous character')
 
-vim.api.nvim_set_keymap('c', '<c-k>', [[ '_' ]], { noremap = true, expr = true, desc = 'Inserts underscore' }) -- expr mapping
+vim.api.nvim_set_keymap('c', '<c-k>', [[ '_' ]], { noremap = true, expr = true, desc = 'Inserts underscore sign' }) -- expr mapping
 
 -- MARK: Visual
 
