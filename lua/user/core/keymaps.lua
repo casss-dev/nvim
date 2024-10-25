@@ -86,6 +86,8 @@ keymap('i', '<C-k>', '_', opts 'inserts an underscore')
 keymap('i', '<m-j>', '<ESC>yypf<Space><Ignore>C<Space><C-O>', opts 'Adds a new comment line')
 keymap('i', '<m-h>', '<BS>', opts 'Delete previous character')
 
+vim.api.nvim_set_keymap('c', '<c-k>', [[ '_' ]], { noremap = true, expr = true, desc = 'Inserts underscore' }) -- expr mapping
+
 -- MARK: Visual
 
 local function search()
