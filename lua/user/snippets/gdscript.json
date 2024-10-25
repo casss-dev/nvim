@@ -139,5 +139,29 @@
 			"\t\tset_expression_property(\"${1:property}\", value)"
 		],
 		"description": "Adds a typed expression property"
+	},
+	"Mark": {
+		"scope": "gdscript",
+		"prefix": "mark",
+		"body": "# MARK: $0",
+		"description": "Creates a mark"
+	},
+	"Fix me": {
+		"scope": "gdscript",
+		"prefix": "fix",
+		"body": "# FIXME: $0",
+		"description": "Creates a fix me"
+	},
+	"Todo": {
+		"scope": "gdscript",
+		"prefix": "todo",
+		"body": "# TODO: $0",
+		"description": "Creates a todo"
+	},
+	"Note": {
+		"scope": "gdscript",
+		"prefix": "note",
+		"body": "# NOTE: $0",
+		"description": "Creates a note"
 	}
 }
