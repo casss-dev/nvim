@@ -15,6 +15,7 @@ spec 'user.arrow'
 
 spec 'user.cmp'
 spec 'user.lsp'
+spec 'user.debug'
 spec 'user.java-lsp'
 spec 'user.format'
 spec 'user.todo'
@@ -42,7 +43,7 @@ spec 'user.extras.ufo'
 spec 'user.extras.xcodebuild'
 
 -- MARK: Screen savers
-spec 'user.extras.donut'
+-- spec 'user.extras.donut'
 
 require 'user.lazy'
 require 'current-theme'
