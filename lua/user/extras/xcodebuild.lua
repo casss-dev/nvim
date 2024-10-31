@@ -3,9 +3,9 @@ local M = {
   dependencies = {
     'nvim-telescope/telescope.nvim',
     'MunifTanjim/nui.nvim',
-    'nvim-neo-tree/neo-tree.nvim',
+    -- 'nvim-neo-tree/neo-tree.nvim',
     -- 'nvim-tree/nvim-tree.lua', -- (optional) to manage project files
-    -- 'stevearc/oil.nvim', -- (optional) to manage project files
+    'stevearc/oil.nvim', -- (optional) to manage project files
     'nvim-treesitter/nvim-treesitter', -- (optional) for Quick tests support (required Swift parser)
   },
 }
@@ -115,7 +115,7 @@ function M.config()
         end,
       },
       neo_tree = {
-        enabled = true, -- enable updating Xcode project files when using neo-tree.nvim
+        enabled = false, -- enable updating Xcode project files when using neo-tree.nvim
         guess_target = true, -- guess target for the new file based on the file path
         should_update_project = function(path) -- path can lead to directory or file
           -- it could be useful if you mix Xcode project with SPM for example
@@ -123,7 +123,7 @@ function M.config()
         end,
       },
       oil_nvim = {
-        enabled = false, -- enable updating Xcode project files when using oil.nvim
+        enabled = true, -- enable updating Xcode project files when using oil.nvim
         guess_target = true, -- guess target for the new file based on the file path
         should_update_project = function(path) -- path can lead to directory or file
           -- it could be useful if you mix Xcode project with SPM for example

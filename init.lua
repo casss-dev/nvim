@@ -21,7 +21,8 @@ spec 'user.format'
 spec 'user.todo'
 spec 'user.mini'
 spec 'user.treesitter'
-spec 'user.neo-tree'
+spec 'user.oil'
+-- spec 'user.neo-tree'
 
 -- spec 'user.terminal' -- messes up godot server go to file
 
