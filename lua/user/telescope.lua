@@ -82,6 +82,8 @@ local M = {
           '%.mp3',
           '%.ttf',
           '%.tscn',
+          '^addons/',
+          '^godot_state_charts_examples/',
         },
       },
       extensions = {
