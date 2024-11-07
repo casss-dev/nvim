@@ -10,6 +10,14 @@ local M = {
 function M.config()
   local oil = require 'oil'
   oil.setup {
+    -- Id is automatically added at the beginning, and name at the end
+    -- See :help oil-columns
+    columns = {
+      -- 'icon',
+      -- "permissions",
+      -- "size",
+      -- "mtime",
+    },
     -- Send deleted files to the trash instead of permanently deleting them (:help oil-trash)
     delete_to_trash = true,
     -- Skip the confirmation popup for simple operations (:help oil.skip_confirm_for_simple_edits)
