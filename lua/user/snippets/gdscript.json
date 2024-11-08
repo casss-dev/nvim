@@ -163,5 +163,17 @@
 		"prefix": "note",
 		"body": "# NOTE: $0",
 		"description": "Creates a note"
+	},
+	"Instantiate": {
+		"scope": "gdscript",
+		"prefix": "inst",
+		"body": [
+			"## The associated scene for this script",
+			"const SCENE = preload(${1:resource_path})",
+			"## Creates an instance of `${2:type}`",
+			"static func instantiate() -> ${2:type}:",
+			"\treturn SCENE.instantiate()$0"
+		],
+		"description": "Adds a static instantiate function"
 	}
 }
