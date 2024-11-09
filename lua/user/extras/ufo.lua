@@ -104,6 +104,7 @@ function M.config()
       vim.lsp.buf.hover()
     end
   end)
+  vim.keymap.set('n', 'zo', 'zA', { noremap = true, silent = true, desc = 'Toggle all folds under cursor' })
 end
 
 return M
