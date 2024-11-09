@@ -17,6 +17,8 @@ vim.api.nvim_create_autocmd('FileType', {
 
 keymap('n', '<leader>so', '<cmd>so %<CR><cmd>lua print "Sourced file!"<CR>', opts '[S]ource this file')
 
+keymap('n', '<leader>h', '<cmd>set list!<CR>', opts 'Toggle hidden characters')
+
 -- MARK: Buffer
 
 -- Save buffer
