@@ -33,7 +33,7 @@ function M.config()
       htmldjango = { 'djlint' },
       swift = { 'swift_format' },
       python = { 'black' },
-      gdscript = { 'gdtoolkit' },
+      gdscript = { 'gdformat' },
 
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
@@ -41,6 +41,13 @@ function M.config()
       -- You can use a sub-list to tell conform to run *until* a formatter
       -- is found.
       -- javascript = { { "prettierd", "prettier" } },
+    },
+    formatters = {
+      gdformat = {
+        command = 'gdformat',
+        args = { '-' },
+        stdin = true,
+      },
     },
   }
 end
