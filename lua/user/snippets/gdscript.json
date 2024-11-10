@@ -18,27 +18,19 @@
 	},
 	"Lambda": {
 		"scope": "gdscript",
-		"prefix": "lm",
+		"prefix": "la",
 		"body": [
 			"var ${1:lambda} = func (${2:params}): ${3:return}$0"
 		],
 		"description": "Adds dependencies export category"
 	},
-	"Dependencies": {
+	"Export category": {
 		"scope": "gdscript",
-		"prefix": "edeps",
+		"prefix": "cat",
 		"body": [
-			"@export_category(\"Dependencies\")"
+			"@export_category(\"${1:name}\")"
 		],
-		"description": "Adds dependencies export category"
-	},
-	"Parameters": {
-		"scope": "gdscript",
-		"prefix": "eparms",
-		"body": [
-			"@export_category(\"Parameters\")"
-		],
-		"description": "Adds dependencies export category"
+		"description": "Adds an export category"
 	},
 	"Log level": {
 		"scope": "gdscript",
@@ -53,18 +45,9 @@
 		],
 		"description": "Adds debug logger"
 	},
-	"Chance": {
-		"scope": "gdscript",
-		"prefix": "echance",
-		"body": [
-			"@export_range(0, 1)",
-			"var $1_chance: float = 0"
-		],
-		"description": "Adds debug logger"
-	},
 	"Setter": {
 		"scope": "gdscript",
-		"prefix": "vset",
+		"prefix": "set",
 		"body": [
 			"var $1 := $2:",
 			"\tset(value):",
@@ -102,7 +85,7 @@
 	},
 	"Ready func": {
 		"scope": "gdscript",
-		"prefix": "rd",
+		"prefix": "rr",
 		"body": [
 			"func _ready() -> void:",
 			"\t${1:pass}"
@@ -113,7 +96,7 @@
 		"scope": "gdscript",
 		"prefix": "ifn",
 		"body": [
-			"if $1 == null",
+			"if not $1:",
 			"\t${2:return}"
 		],
 		"description": "Adds a null check"

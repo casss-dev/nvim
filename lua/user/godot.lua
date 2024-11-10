@@ -6,5 +6,6 @@ local function file_exists(name)
 end
 
 if file_exists(projectfile) then
-  vim.fn.serverstart './godothost'
+  vim.fn.serverstart '/tmp/godot.pipe'
+  -- vim.fn.serverstart './godothost'
 end
