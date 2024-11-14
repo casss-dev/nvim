@@ -24,6 +24,14 @@
 		],
 		"description": "Adds dependencies export category"
 	},
+	"Export": {
+		"scope": "gdscript",
+		"prefix": "e",
+		"body": [
+			"@export var ${1:name}: ${2:type}"
+		],
+		"description": "Creates an export variable"
+	},
 	"Export category": {
 		"scope": "gdscript",
 		"prefix": "cat",
@@ -103,7 +111,7 @@
 	},
 	"Connect signal": {
 		"scope": "gdscript",
-		"prefix": "connect",
+		"prefix": "conn",
 		"body": [
 			"${1:signal_emitter}.${2:signal_callback}.connect(_on_${2:signal_callback})",
 			"func _on_${2:signal_callback}(${3:params}) -> void:",
