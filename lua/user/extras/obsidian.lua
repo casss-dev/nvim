@@ -19,7 +19,7 @@ local M = {
     workspaces = {
       {
         name = 'personal',
-        path = '~/Library/Mobile Documents/iCloud~md~obsidian/Documents/cdev',
+        path = '~/Library/Mobile Documents/iCloud~md~obsidian/Documents',
       },
     },
 
@@ -71,12 +71,16 @@ local M = {
         end,
         opts = { buffer = true, expr = true },
       },
+      ['<leader>OO'] = {
+        action = ':ObsidianOpen<CR>',
+        opts = { noremap = true, silent = true },
+      },
     },
 
     -- Where to put new notes. Valid options are
     --  * "current_dir" - put new notes in same directory as the current buffer.
     --  * "notes_subdir" - put new notes in the default notes subdirectory.
-    new_notes_location = 'notes_subdir',
+    new_notes_location = 'current_dir',
 
     -- Optional, customize how note IDs are generated given an optional title.
     ---@param title string|?
@@ -95,7 +99,8 @@ local M = {
           suffix = suffix .. string.char(math.random(65, 90))
         end
       end
-      return tostring(os.time()) .. '-' .. suffix
+      return suffix
+      -- return tostring(os.time()) .. '-' .. suffix
     end,
 
     -- Either 'wiki' or 'markdown'.
@@ -128,7 +133,7 @@ local M = {
 
     -- Optional, for templates (see below).
     templates = {
-      folder = 'templates',
+      folder = 'cdev/templates',
       date_format = '%Y-%m-%d',
       time_format = '%H:%M',
       -- A map for custom variables, the key should be the variable and the value a function

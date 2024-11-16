@@ -33,7 +33,7 @@ function M.config()
     -- See :help oil-actions for a list of all available actions
     keymaps = {
       ['g?'] = 'actions.show_help',
-      ['yp'] = 'actions.copy_entry_path',
+      ['<m-y>'] = 'actions.copy_entry_path',
       ['<CR>'] = 'actions.select',
       ['<C-s>'] = { 'actions.select', opts = { vertical = true }, desc = 'Open the entry in a vertical split' },
       -- ['<C-h>'] = { 'actions.select', opts = { horizontal = true }, desc = 'Open the entry in a horizontal split' },
