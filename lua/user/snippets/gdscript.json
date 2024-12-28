@@ -113,7 +113,7 @@
 		"scope": "gdscript",
 		"prefix": "conn",
 		"body": [
-			"${1:signal_emitter}.${2:signal_callback}.connect(_on_${2:signal_callback})",
+			"\t${1:signal_emitter}.${2:signal_callback}.connect(_on_${2:signal_callback})",
 			"func _on_${2:signal_callback}(${3:params}) -> void:",
 			"\tpass$0"
 		],
@@ -155,6 +155,17 @@
 		"body": "# NOTE: $0",
 		"description": "Creates a note"
 	},
+	"Box": {
+		"scope": "gdscript",
+		"prefix": "box",
+		"body": [
+			"#################",
+			"## $1 ##",
+			"#################",
+			"$0"
+		],
+		"description": "Creates a box"
+	},
 	"Instantiate": {
 		"scope": "gdscript",
 		"prefix": "inst",
@@ -166,5 +177,50 @@
 			"\treturn SCENE.instantiate()$0"
 		],
 		"description": "Adds a static instantiate function"
+	},
+	"Test": {
+		"description": "Creates a new test method",
+		"scope": "gdscript",
+		"prefix": "test",
+		"body": [
+			"func test_${1:name}():",
+			"\t# given",
+			"\t$2",
+			"\t# when",
+			"\t$3",
+			"\t# then",
+			"\t$4"
+		]
+	},
+	"Editor Description": {
+		"description": "Creates an editor description",
+		"scope": "gdscript",
+		"prefix": "desc",
+		"body": [
+			"const EDITOR_DESCRIPTION = \"\"\"",
+			"$1",
+			"\"\"\"",
+			"",
+			"func _enter_tree() -> void:",
+			"\tif Engine.is_editor_hint():",
+			"\t\teditor_description = EDITOR_DESCRIPTION.strip_edges()",
+			"\t\treturn"
+		]
+	},
+	"Save and Load": {
+		"description": "Adds handling for saving and loading a node",
+		"scope": "gdscript",
+		"prefix": "save",
+		"body": [
+			"@onready var _save_events := SaveEventBus.get_instance()",
+			"",
+			"func _ready() -> void:",
+			"\t_save_events.save.connect(_on_save)",
+			"\t_save_events.load.connect(_on_load_game)",
+			"func _on_save(game: SavedGame) -> void:",
+			"\t${1:pass}",
+			"func _on_load_game(game: SavedGame) -> void:",
+			"\t${2:pass}"
+		]
 	}
 }
