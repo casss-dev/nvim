@@ -6,3 +6,5 @@ declarative
 declarative
 initializer
 usecase
+interactor
+interactable

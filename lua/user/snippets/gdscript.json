@@ -222,5 +222,14 @@
 			"func _on_load_game(game: SavedGame) -> void:",
 			"\t${2:pass}"
 		]
+	},
+	"Is Editor Hint": {
+		"description": "Create an editor hint check",
+		"scope": "gdscript",
+		"prefix": "ifeditor",
+		"body": [
+			"if ${1:not }Engine.is_editor_hint():",
+			"\t$0"
+		]
 	}
 }

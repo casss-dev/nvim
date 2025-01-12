@@ -43,6 +43,7 @@ spec 'user.extras.zen-mode'
 spec 'user.extras.ufo'
 spec 'user.extras.xcodebuild'
 spec 'user.extras.obsidian'
+spec 'user.extras.colorizer'
 
 -- MARK: Screen savers
 -- spec 'user.extras.donut'
